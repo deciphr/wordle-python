@@ -73,9 +73,3 @@ def check(word, attempt):
 	finalize_render()
 	
 	return correct == len(word)
-if __name__ == "__main__":
-	add_render("ABSENT", "a")
-	add_render("PRESENT", "b")
-	add_render("CORRECT", "c")
-
-	finalize_render()
