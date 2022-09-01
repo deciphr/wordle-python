@@ -40,10 +40,11 @@ def finalize_render():
 def check(word, attempt):
 	position = -1
 	correct = 0
-	previous, count  = None, 0
-	for letter in attempt:
+	previous, count = None, 0
+
+	for letter in attempt.lower():
 		position += 1
-		if not letter in word:
+		if not letter in word.lower():
 			add_render("ABSENT", letter)
 		else:
 			# checks for duplicate letters
