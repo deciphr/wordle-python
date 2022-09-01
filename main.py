@@ -19,11 +19,11 @@ if __name__ == "__main__":
 
 		if len(attempt) == len(random_word):
 			if attempt in wordlist:
+				tries += 1
+				
 				if wordle.check(random_word, attempt):
 					print(f"Completed in {tries} tries!")
 					break
-				else:
-					tries += 1
 			else:
 				print("Not in wordlist!")
 					
